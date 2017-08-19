@@ -65,6 +65,7 @@ RUN ["/opt/tools/android-accept-licenses.sh", "android update sdk --all --no-ui 
 
 EXPOSE 8100 35729
 
+ADD tools/ionic.sh /root/ionic.sh
 ####
 
 # ADD init-user.sh /init-user.sh

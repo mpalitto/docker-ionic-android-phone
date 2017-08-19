@@ -6,8 +6,9 @@ From your Linux prompt as `root` in the `/root` DIR:
 ```
 git clone https://github.com/mpalitto/docker-ionic-android-phone.git <your APP name>
 cd <your APP name>
-Edit Dockerfile variables in case you need to work with different Ionic, Cordova or NPM versions, otherwise the latest will be used.
 ```
+Edit Dockerfile variables in case you need to work with different Ionic, Cordova or NPM versions, otherwise the latest will be used.
+
 * run `source docker.sh build` (which will build the docker image)
 * run `source docker.sh run` (for starting the container)
 A shared DIR with your HOST will be created named ` <your APP name>-code`
@@ -18,7 +19,7 @@ If you have already some code you can copy it in there, or you can start a new p
 Once you're inside your docker container and folder, you can follow usual workflow to a Ionic project:
 For example:
 ```
-ionic start <your APP name> tab
+ionic start <your APP name> tabs
 ```
 The code will be accessible from your HOST in the `/root/<you APP name>/<your APP name>-code/` DIR
 
@@ -32,7 +33,7 @@ you can also run `ionic lab`
 open your browser and enter `http://localhost:8100/ionic-lab`
 
 ### Running the APP on your PHONE
-There are some APP that use NATIVE plugin (for example the SQLite) which won't be able to run in the browser.
+There are some APPs that use NATIVE plugins (for example the SQLite) which won't be able to run in the browser.
 
 However you will be able to run it on a PHONE device.
  - Have your phone plugged and with proper USB connection mode (PTP, sometimes MTP).
